@@ -1,0 +1,20 @@
+name: LightReboot
+version: '1.0.0'
+main: org.flennn.LightReboot
+api-version: '1.20'
+commands:
+  reboot:
+    description: Safely reboots the server with a countdown
+    usage: /reboot <delay>|cancel
+    permission: rivalcore.reboot
+  lightrebootreload:
+    description: Reloads LightReboot configuration
+    usage: /lightrebootreload
+    permission: rivalcore.reload
+permissions:
+  rivalcore.reboot:
+    description: Allows use of /reboot
+  rivalcore.cancel:
+    description: Allows cancelling a pending reboot
+  rivalcore.reload:
+    description: Allows reloading LightReboot config

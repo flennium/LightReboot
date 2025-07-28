@@ -1,0 +1,22 @@
+# LightReboot configuration
+plugins-to-disable:
+  - CombatLogX
+  # Add more plugin names as needed
+
+messages:
+  reboot-broadcast: "&6&l[⚠ Reboot Notice ⚠] &r&7The server will restart in &e{seconds} seconds&7."
+  reboot-warning: "&e&l[Reboot] &r&7Rebooting in &c{seconds} seconds&7!"
+  plugin-disabled: "&c&l[Reboot] &r&7Plugin &c{plugin} &7has been disabled to initiate a safe reboot."
+  kick-message: "&c&lServer Restarting... &r\n&7Please rejoin in a moment. All data has been saved."
+  no-permission: "&4&l[Access Denied] &r&7You don't have permission to use this command."
+  usage: "&c&l[Usage] &r&7Try: &f/reboot <1-30>"
+  delay-invalid: "&c&l[Error] &r&7Invalid delay. Please enter a number between &f1 &7and &f30&7."
+  delay-out-of-range: "&c&l[Error] &r&7Delay must be between &f1 &7and &f30 seconds&7."
+  reload-success: "&a&l[Reboot] &r&7Configuration successfully reloaded."
+  cancel-broadcast: "&c&l[Reboot Cancelled] &r&7Scheduled reboot has been aborted."
+  notify-warning: "&e&l[Reboot Notice] &r&7The server will reboot in &e{seconds} seconds&7."
+
+# Permissions:
+# - rivalcore.reboot: Use the reboot command
+# - rivalcore.cancel: Cancel a reboot
+# - rivalcore.reload: Reload the configuration
