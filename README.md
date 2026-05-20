@@ -2,6 +2,10 @@
 
 LightReboot is a Paper plugin for safe, configurable server restarts. It gives staff a clean reboot command, countdown warnings, optional schedules, and a controlled shutdown flow that saves data before calling `Bukkit.shutdown()`.
 
+## Showcase
+
+- [LightReboot - Showcase 01](https://youtu.be/CozQR2_lh0E)
+
 ## Features
 
 - Manual reboot countdowns
