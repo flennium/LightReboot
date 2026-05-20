@@ -1,22 +1,81 @@
-# LightReboot configuration
-plugins-to-disable:
-  - CombatLogX
-  # Add more plugin names as needed
+reboot:
+  default-delay-seconds: 60
+  min-delay-seconds: 5
+  max-delay-seconds: 3600
+  final-shutdown-delay-seconds: 3
+  save-players: true
+  save-worlds: true
+  kick-players: true
+
+  disable-plugins:
+    enabled: false
+    names:
+      - CombatLogX
+
+schedule:
+  enabled: false
+  timezone: "UTC"
+  days:
+    - MONDAY
+    - TUESDAY
+    - WEDNESDAY
+    - THURSDAY
+    - FRIDAY
+    - SATURDAY
+    - SUNDAY
+  times:
+    - "03:00"
+
+countdown:
+  warning-times:
+    - 300
+    - 120
+    - 60
+    - 30
+    - 10
+    - 5
+    - 4
+    - 3
+    - 2
+    - 1
+
+  broadcast:
+    enabled: true
+    message: "&8[&eRestart&8] &7Server restart in &e{time}&7."
+
+  title:
+    enabled: true
+    title: "&cRestarting Soon"
+    subtitle: "&7Restart in &e{time}&7."
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+
+  actionbar:
+    enabled: true
+    message: "&eRestart in &c{time} &8| &7Online: &f{online}"
+
+  bossbar:
+    enabled: true
+    message: "&eServer restart in &c{time}"
+    color: YELLOW
+    style: SOLID
 
 messages:
-  reboot-broadcast: "&6&l[⚠ Reboot Notice ⚠] &r&7The server will restart in &e{seconds} seconds&7."
-  reboot-warning: "&e&l[Reboot] &r&7Rebooting in &c{seconds} seconds&7!"
-  plugin-disabled: "&c&l[Reboot] &r&7Plugin &c{plugin} &7has been disabled to initiate a safe reboot."
-  kick-message: "&c&lServer Restarting... &r\n&7Please rejoin in a moment. All data has been saved."
-  no-permission: "&4&l[Access Denied] &r&7You don't have permission to use this command."
-  usage: "&c&l[Usage] &r&7Try: &f/reboot <1-30>"
-  delay-invalid: "&c&l[Error] &r&7Invalid delay. Please enter a number between &f1 &7and &f30&7."
-  delay-out-of-range: "&c&l[Error] &r&7Delay must be between &f1 &7and &f30 seconds&7."
-  reload-success: "&a&l[Reboot] &r&7Configuration successfully reloaded."
-  cancel-broadcast: "&c&l[Reboot Cancelled] &r&7Scheduled reboot has been aborted."
-  notify-warning: "&e&l[Reboot Notice] &r&7The server will reboot in &e{seconds} seconds&7."
-
-# Permissions:
-# - rivalcore.reboot: Use the reboot command
-# - rivalcore.cancel: Cancel a reboot
-# - rivalcore.reload: Reload the configuration
+  prefix: "&8[&eLightReboot&8]&r "
+  help-header: "&eLightReboot commands"
+  no-permission: "&cYou do not have permission to use this."
+  unknown-command: "&cUnknown command. Use &f/lightreboot help&c."
+  delay-invalid: "&cInvalid time. Use seconds or shorthand like &f30s&c, &f5m&c, or &f1h&c."
+  delay-out-of-range: "&cTime must be between &f{min}&c and &f{max}&c seconds."
+  already-running: "&cA reboot is already running. Time left: &f{time}&c."
+  not-running: "&cNo reboot countdown is active."
+  reload-success: "&aConfiguration reloaded."
+  reboot-started: "&eA server restart has been scheduled in &f{time}&e. Reason: &f{reason}&e."
+  reboot-cancelled: "&cThe scheduled restart was cancelled by &f{player}&c."
+  shutdown-started: "&cRestarting now. Saving server data..."
+  status-idle: "&aNo reboot is running."
+  status-running: "&eReboot running. Time left: &f{time}&e."
+  status-scheduled: "&aScheduled reboots enabled: &f{count}&a time(s), timezone &f{timezone}&a."
+  preview-header: "&aPreviewing reboot messages for &f{time}&a."
+  kick-message: "&cServer restarting\n&7Please rejoin in a moment."

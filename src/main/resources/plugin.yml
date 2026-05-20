@@ -1,20 +1,39 @@
 name: LightReboot
-version: '1.0.0'
-main: org.flennn.LightReboot
+version: '${project.version}'
+main: org.flennn.lightreboot.LightReboot
 api-version: '1.20'
+author: flennn
+softdepend: [PlaceholderAPI]
+description: Safe configurable reboot countdowns for Paper servers
+
 commands:
-  reboot:
-    description: Safely reboots the server with a countdown
-    usage: /reboot <delay>|cancel
-    permission: rivalcore.reboot
-  lightrebootreload:
-    description: Reloads LightReboot configuration
-    usage: /lightrebootreload
-    permission: rivalcore.reload
+  lightreboot:
+    description: Manage safe reboot countdowns
+    usage: /<command> <start|cancel|status|preview|reload|help>
+    aliases: [reboot, lreboot]
+
 permissions:
-  rivalcore.reboot:
-    description: Allows use of /reboot
-  rivalcore.cancel:
-    description: Allows cancelling a pending reboot
-  rivalcore.reload:
-    description: Allows reloading LightReboot config
+  lightreboot.start:
+    description: Start reboot countdowns
+    default: op
+  lightreboot.cancel:
+    description: Cancel active reboot countdowns
+    default: op
+  lightreboot.status:
+    description: View reboot status
+    default: op
+  lightreboot.preview:
+    description: Preview countdown messages
+    default: op
+  lightreboot.reload:
+    description: Reload LightReboot configuration
+    default: op
+  lightreboot.admin:
+    description: Full access to LightReboot commands
+    default: op
+    children:
+      lightreboot.start: true
+      lightreboot.cancel: true
+      lightreboot.status: true
+      lightreboot.preview: true
+      lightreboot.reload: true
