@@ -16,7 +16,6 @@ LightReboot is a Paper plugin for safe, configurable server restarts. It gives s
 - Config validation with clean console warnings
 - Optional plugin-disable list before shutdown
 - Optional PlaceholderAPI support in player messages
-- GitHub Actions build and release workflows
 
 ## Requirements
 
