@@ -19,8 +19,8 @@ LightReboot is a Paper plugin for safe, configurable server restarts. It gives s
 
 ## Requirements
 
-- Paper 1.20.4 or compatible server
-- Java 17
+- Paper 1.21 through 26.2 or a compatible server
+- Java 21+ (Java 25 for Minecraft 26.2)
 - Maven 3.9+ to build from source
 
 ## Installation

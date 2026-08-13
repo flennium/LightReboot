@@ -1,7 +1,7 @@
 name: LightReboot
 version: '${project.version}'
 main: org.flennn.lightreboot.LightReboot
-api-version: '1.20'
+api-version: '1.21'
 author: flennn
 softdepend: [PlaceholderAPI]
 description: Safe configurable reboot countdowns for Paper servers
